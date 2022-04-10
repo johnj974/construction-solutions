@@ -6,6 +6,7 @@ import { HomeHomeComponent } from './home-home/home-home.component';
 import { HomeContactComponent } from './home-contact/home-contact.component';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HomeSkillsComponent } from './home-skills/home-skills.component';
+import { HomeGalleryComponent } from './home-gallery/home-gallery.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeSkillsComponent } from './home-skills/home-skills.component';
     HomeHomeComponent,
     HomeContactComponent,
     HomeAboutComponent,
-    HomeSkillsComponent
+    HomeSkillsComponent,
+    HomeGalleryComponent
   ],
   imports: [
     CommonModule,
