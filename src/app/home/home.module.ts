@@ -7,7 +7,7 @@ import { HomeContactComponent } from './home-contact/home-contact.component';
 import { HomeAboutComponent } from './home-about/home-about.component';
 import { HomeSkillsComponent } from './home-skills/home-skills.component';
 import { HomeGalleryComponent } from './home-gallery/home-gallery.component';
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,8 @@ import { HomeGalleryComponent } from './home-gallery/home-gallery.component';
     HomeContactComponent,
     HomeAboutComponent,
     HomeSkillsComponent,
-    HomeGalleryComponent
+    HomeGalleryComponent,
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, HomeRoutingModule, SharedModule],
 })
-export class HomeModule { }
+export class HomeModule {}
