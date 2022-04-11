@@ -1,0 +1,16 @@
+.container-fluid {
+  background: url("../../../assets/images/blueBookshelf.jpg") rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  height: 100%;
+}
+
+h3,
+p {
+  color: white;
+}

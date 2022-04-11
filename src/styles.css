@@ -4,3 +4,29 @@
 * {
   font-family: "Roboto", sans-serif;
 }
+
+.image-box {
+  width: 80%;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+@media screen and (max-width: 771px) {
+  .image-box {
+    width: 100%;
+  }
+}
+
+.para-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: rgb(47, 160, 134);
+  padding: 0.75em 1.5em;
+  border-radius: 1.5em;
+  font-weight: bold;
+  color: #fff;
+}
