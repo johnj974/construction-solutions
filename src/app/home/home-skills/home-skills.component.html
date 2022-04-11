@@ -1,1 +1,29 @@
-<p>home-skills works!</p>
+<div class="container py-5">
+  <div class="text-center">
+    <h2 class="display-3">Services</h2>
+    <p>
+      We offer an extensive range of services such as bespoke interior design
+      for residential projects right through to commercial projects
+    </p>
+  </div>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let service of serviceProvidedArray">
+      <div class="card">
+        <img
+          src="{{ service.image }}"
+          class="card-img-top"
+          alt="{{ service.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ service.name }}</h5>
+          <p class="card-text">
+            {{ service.description }}
+          </p>
+          <div class="text-center">
+            <button class="btn">{{ service.name }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
