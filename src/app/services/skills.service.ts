@@ -10,27 +10,35 @@ export class SkillsService {
     new SkillsModel(
       'Residential',
       'We offer an extensive range of services for residential projects which range from single room design to complete home redesigns.',
+      'Complete Residential Projects Undertaken',
       '../../assets/images/upstairs.jpg'
     ),
     new SkillsModel(
       'Commercial',
       'We provide an exceptional Building Maintenance service for many customers in retail, commercial and residential areas',
+      'Commited to our Commercial Partners',
       '../../assets/images/building.jpg'
     ),
     new SkillsModel(
       'Decking',
       'We specialize in creating high-performing, low maintenance, beautiful outdoor spaces for our customers.',
+      'Quality Decking',
       '../../assets/images/finish-deck.jpg'
     ),
     new SkillsModel(
       'Interior',
       'We offer an extensive interior carpentry service catering to everything from single interior design to complete interior refurbishment',
+      'Bespoke Interior Carpentry ',
       '../../assets/images/blue-stairs.jpg'
     ),
   ];
 
   getSkillsArray() {
     return this.skillsServiceArray.slice();
+  }
+
+  getSingleSkill(index: number) {
+    return this.skillsServiceArray[index];
   }
 
   constructor() {}

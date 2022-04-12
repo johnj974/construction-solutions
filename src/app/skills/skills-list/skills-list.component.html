@@ -1,0 +1,38 @@
+<div class="container py-5">
+  <div
+    class="row py-3"
+    *ngFor="let service of retrievedSkillsArray; let id = index"
+  >
+    <div class="col-md-6">
+      <h2 class="display-3">{{ service.name }}</h2>
+      <h4>{{ service.heading }}</h4>
+      <div class="para-container">
+        <p>
+          {{ service.description }}
+        </p>
+        <p>
+          We offer an extensive range of services which include interior
+          carpentry design, project management, complete home redesigns,
+          renovations and extensions. We focus on the customers best interests
+          and satisfaction. With an ever-changing economy, we believe that
+          customer relations and financial planning are of utmost importance.
+        </p>
+        <p>
+          Our reputation is built on the highest level of quality and our
+          commitment to provide industry leading building services to our
+          customers.
+        </p>
+        <p class="btn" (click)="toSingleService(service.name, id)">
+          {{ service.name }}
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img
+        class="image-box float-end"
+        src="{{ service.image }}"
+        alt="{{ service.name }}"
+      />
+    </div>
+  </div>
+</div>
