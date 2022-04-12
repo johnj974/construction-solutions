@@ -5,6 +5,12 @@
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --main-color: hsl(191, 54%, 48%);
+  --secondary-color: hsl(195, 54%, 27%);
+  --white-text: hsl(0, 0%, 100%);
+}
+
 .image-box {
   width: 80%;
   display: block;
@@ -24,9 +30,14 @@
 }
 
 .btn {
-  background-color: rgb(47, 160, 134);
+  background-color: var(--main-color);
   padding: 0.75em 1.5em;
   border-radius: 1.5em;
   font-weight: bold;
-  color: #fff;
+  color: var(--white-text);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-text);
 }

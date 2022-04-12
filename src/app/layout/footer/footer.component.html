@@ -1,1 +1,40 @@
-<p>footer works!</p>
+<div class="container-fluid">
+  <div class="row pt-3">
+    <div class="col-md-6 text-center">
+      <ul class="company-info">
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a routerLink="about" routerLinkActive="active">About</a>
+        </li>
+        <li>
+          <a routerLink="services" routerLinkActive="active">Services</a>
+        </li>
+        <li>
+          <a routerLink="gallery" routerLinkActive="active">Gallery</a>
+        </li>
+        <li>
+          <a routerLink="faq" routerLinkActive="active">FAQ's</a>
+        </li>
+        <li>
+          <a routerLink="contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 text-center">
+      <ul class="company-info">
+        <li>Company Reg No.<span>1234567</span></li>
+        <li>Company VAT No.<span>7654321</span></li>
+        <li>Company Email.<span>company@company.ie</span></li>
+        <li>Company Contact No.<span>01-7654321</span></li>
+      </ul>
+    </div>
+    <h4 class="py-4">Construction Solutions {{ displayYear }}</h4>
+  </div>
+</div>
