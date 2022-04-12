@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home-contact',
-  templateUrl: './home-contact.component.html',
-  styleUrls: ['./home-contact.component.css'],
+  selector: 'app-contact-section',
+  templateUrl: './contact-section.component.html',
+  styleUrls: ['./contact-section.component.css'],
 })
-export class HomeContactComponent implements OnInit {
+export class ContactSectionComponent implements OnInit {
   //.
   toContact() {
     this.router.navigate(['/contact']);
