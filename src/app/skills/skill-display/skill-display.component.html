@@ -1,1 +1,22 @@
-<h1>{{ receivedSkill.name }}</h1>
+<!-- <h1>{{ receivedSkill.name }}</h1> -->
+<div class="container py-3">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-1">{{ receivedSkill.name }}</h1>
+      <h3>{{ receivedSkill.heading }}</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+        reiciendis aliquid, recusandae perferendis impedit quo quae repellendus
+        ipsa sit distinctio.
+      </p>
+      <h4>Some of our Services</h4>
+      <ul *ngFor="let job of receivedSkill.jobs">
+        <li>{{ job }}</li>
+      </ul>
+      <div class="text-center">
+        <button class="btn" (click)="toServicesPage()">Services</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-contact-section></app-contact-section>

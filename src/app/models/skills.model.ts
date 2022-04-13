@@ -3,6 +3,7 @@ export class SkillsModel {
     public name: string,
     public description: string,
     public heading: string,
-    public image: string
+    public image: string,
+    public jobs: string[]
   ) {}
 }

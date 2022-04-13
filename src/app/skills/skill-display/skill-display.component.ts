@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SkillsModel } from 'src/app/models/skills.model';
 import { SkillsService } from 'src/app/services/skills.service';
 
@@ -12,9 +12,14 @@ export class SkillDisplayComponent implements OnInit {
   //.
   receivedSkill: SkillsModel;
 
+  toServicesPage() {
+    this.router.navigate(['services']);
+  }
+
   constructor(
     private skillsService: SkillsService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
