@@ -1,8 +1,9 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
-      <div class="accordion" id="accordionExample">
+  <div class="row py-5">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3 class="pb-3">Frequently Asked Questions</h3>
+      <div class="accordion accordion-flush" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button
@@ -13,7 +14,7 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              How long will I be waiting for a quote?
             </button>
           </h2>
           <div
@@ -23,14 +24,8 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Once we have come and inspected your property and scope of works
+              involved, we will send you a quote within 3 days.
             </div>
           </div>
         </div>
@@ -44,7 +39,7 @@
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              What area of London do you cover?
             </button>
           </h2>
           <div
@@ -54,14 +49,9 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Generally within the M25 but do travel outside of this with
+              projects completed in Hertfordshire, Essex, Kent, Oxfordshire and
+              Buckinghamshire.'
             </div>
           </div>
         </div>
@@ -75,7 +65,7 @@
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              How much notice do you require?
             </button>
           </h2>
           <div
@@ -85,50 +75,66 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Generally projects are signed up in a chronological order, ie you
+              will be offered a start date based on availability. We pride
+              ourselves on punctuality and any start date agreed is honoured
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              How long is a quote valid for?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Quotes are valid for 30 days given the fluctuation in material
+              cost we cannot offer longer quotes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              How much disruption will the job create
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              This is dependent on the scope of works, We will cut outside where
+              possible and where it is not possible, we use dust extraction
+              systems for all our cutting tools to keep associated dust with
+              building works to the absolute minimum.
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3"></div>
+    <div class="col-md-2"></div>
   </div>
 </div>
-
-<!-- <div
-class="accordion"
-id="accordionExample"
-*ngFor="let faq of questionsArray"
->
-<div class="accordion-item">
-  <h2 class="accordion-header" id="{{ faq.headingId }}">
-    <button
-      class="accordion-button"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#{{ faq.collapseId }}"
-      aria-expanded="false"
-      aria-controls="{{ faq.collapseId }}"
-    >
-      {{ faq.question }}
-    </button>
-  </h2>
-  <div
-    id="{{ faq.collapseId }}"
-    class="accordion-collapse collapsed"
-    aria-labelledby="{{ faq.headingId }}"
-    data-bs-parent="#accordionExample"
-  >
-    <div class="accordion-body">
-      {{ faq.answer }}
-    </div>
-  </div>
-</div>
-</div> -->

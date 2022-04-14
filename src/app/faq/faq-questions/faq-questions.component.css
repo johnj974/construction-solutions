@@ -1,0 +1,21 @@
+.container-fluid {
+  background-color: var(--secondary-color);
+}
+
+h3 {
+  color: var(--white-text);
+}
+
+.accordion-body {
+  padding: 2rem 2.5rem;
+}
+
+.accordion-button {
+  background-color: var(--main-color);
+  color: var(--white-text);
+}
+
+/* .accordion-button:not(.collapsed) {
+  color: var(--white-text);
+  background-color: var(--secondary-color);
+} */

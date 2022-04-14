@@ -8,30 +8,35 @@ export class QuestionsService {
   //.
   faqArray: QuestionModel[] = [
     new QuestionModel(
+      false,
       'collapseOne',
       'headingOne',
       'How long will I be waiting for a quote?',
       'Once we have come and inspected your property and scope of works involved, we will send you a quote within 3 days.'
     ),
     new QuestionModel(
+      false,
       'collapseTwo',
       'headingTwo',
       'What area of London do you cover?',
       'Generally within the M25 but do travel outside of this with projects completed in Hertfordshire, Essex, Kent, Oxfordshire and Buckinghamshire.'
     ),
     new QuestionModel(
+      false,
       'collapseThree',
       'headingThree',
       'How much notice do you require?',
       'Generally projects are signed up in a chronological order, ie you will be offered a start date based on availability. We pride ourselves on punctuality and any start date agreed is honoured'
     ),
     new QuestionModel(
+      false,
       'collapseFour',
       'headingFour',
       'How long is a quote valid for?',
       'Quotes are valid for 30 days given the fluctuation in material cost we cannot offer longer quotes.'
     ),
     new QuestionModel(
+      false,
       'collapseFive',
       'headingFive',
       'How much disruption will the job create',

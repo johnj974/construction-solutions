@@ -9,6 +9,11 @@ import { QuestionsService } from 'src/app/services/questions.service';
 export class FaqQuestionsComponent implements OnInit {
   //.
   questionsArray = [];
+  toggle = false;
+
+  toggleView(data) {
+    this.toggle = !this.toggle;
+  }
 
   constructor(private questionsService: QuestionsService) {}
 
