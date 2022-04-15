@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
 }
 
 a {
@@ -8,15 +8,12 @@ a {
   margin-right: 1em;
 }
 
-.nav-link.active {
-  color: var(--secondary-color);
-}
-
+.nav-link.active,
 a:hover {
-  color: var(--secondary-color);
+  color: var(--main-color);
 }
 
-/* Navbar Colour Change */
+/* Navbar Toggler Colour Change */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -24,4 +21,23 @@ a:hover {
 .navbar-toggler {
   border: 2px solid var(--white-text);
 }
-/* Navbar Colour Change */
+
+/* Navbar Selected Link Animated Border */
+
+nav a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-color);
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:active::after {
+  width: 100%;
+}

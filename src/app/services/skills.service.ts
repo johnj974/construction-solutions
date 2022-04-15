@@ -39,7 +39,7 @@ export class SkillsService {
     ),
     new SkillsModel(
       'Decking',
-      'We specialize in creating high-performing, low maintenance, beautiful outdoor spaces for our customers.',
+      'We specialize in creating high-performing, low maintenance, beautiful outdoor spaces for both commercial and residential projects.',
       'Quality Decking',
       '../../assets/images/finish-deck.jpg',
       [
