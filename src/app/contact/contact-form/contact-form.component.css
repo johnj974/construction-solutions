@@ -2,3 +2,13 @@
   background-color: var(--secondary-color);
   color: var(--white-text);
 }
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-bottom: 2px solid var(--warning);
+}
+
+span {
+  color: var(--warning);
+  float: right;
+}

@@ -7,7 +7,10 @@
     </p>
   </div>
   <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col-lg-3 col-md-6" *ngFor="let service of serviceProvidedArray">
+    <div
+      class="col-lg-3 col-md-6"
+      *ngFor="let service of serviceProvidedArray; let id = index"
+    >
       <div class="card">
         <img
           src="{{ service.image }}"
@@ -20,7 +23,9 @@
             {{ service.description }}
           </p>
           <div class="text-center">
-            <button class="btn">{{ service.name }}</button>
+            <button class="btn" (click)="toSingleService(service.name, id)">
+              {{ service.name }}
+            </button>
           </div>
         </div>
       </div>
