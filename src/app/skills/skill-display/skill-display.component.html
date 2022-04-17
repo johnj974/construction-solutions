@@ -5,9 +5,7 @@
       <h1 class="display-1">{{ receivedSkill.name }}</h1>
       <h3>{{ receivedSkill.heading }}</h3>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
-        reiciendis aliquid, recusandae perferendis impedit quo quae repellendus
-        ipsa sit distinctio.
+        {{ receivedSkill.description }}
       </p>
       <h4>Some of our Services</h4>
       <ul *ngFor="let job of receivedSkill.jobs">

@@ -1,15 +1,15 @@
 .container-fluid {
   background-color: var(--secondary-color);
-  /* background-image: linear-gradient(
-    to top right,
-    var(--main-color),
-    var(--secondary-color)
-  ); */
+
   color: var(--white-text);
 }
 
 h4 {
   text-align: center;
+}
+
+ul.company-info {
+  padding: 0;
 }
 
 li {
