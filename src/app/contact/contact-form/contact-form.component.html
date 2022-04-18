@@ -1,6 +1,130 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 py-5">
+    <div class="col-md-6 order-md-2 form-column py-5">
+      <h3 *ngIf="formSubmitted; else form">
+        Thank You {{ contactForm.value.name | titlecase }} for your interest in
+        {{ contactForm.value.subject }}, we look forward to meeting you.
+      </h3>
+      <ng-template #form>
+        <h3>Make An Enquiry</h3>
+        <form
+          (submit)="onSubmit()"
+          [formGroup]="contactForm"
+          autocomplete="off"
+        >
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              placeholder="Name"
+              #formName
+            />
+
+            <label for="name" class="form-label">Name</label>
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('name').valid &&
+                contactForm.get('name').touched
+              "
+            >
+              - Please enter a valid name.
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="form-control"
+              placeholder="E-mail"
+            />
+
+            <label for="email" class="form-label">Email</label>
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('email').valid &&
+                contactForm.get('email').touched
+              "
+            >
+              - Please enter a valid email.
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              id="phone"
+              formControlName="phone"
+              class="form-control"
+              placeholder="Phone No."
+            />
+            <label for="phone" class="form-label">Phone No.</label>
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('phone').valid &&
+                contactForm.get('phone').touched
+              "
+            >
+              - Please enter a valid 9 digit phone number
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              formControlName="subject"
+              placeholder="Subject"
+              #formSubject
+            />
+            <label for="subject" class="form-label">Subject</label>
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('subject').valid &&
+                contactForm.get('subject').touched
+              "
+            >
+              - Please enter a valid Subject.
+            </span>
+          </div>
+
+          <div class="mb-3">
+            <textarea
+              type="text"
+              class="form-control"
+              id="message"
+              formControlName="message"
+              placeholder="Message"
+              rows="6"
+            ></textarea>
+            <!-- <label for="message" class="form-label">message</label> -->
+            <span
+              class="form-text small"
+              *ngIf="
+                !contactForm.get('message').valid &&
+                contactForm.get('message').touched
+              "
+            >
+              - Please enter a valid message.
+            </span>
+          </div>
+          <div class="button-container">
+            <button class="btn" [disabled]="contactForm.status === 'INVALID'">
+              Submit
+            </button>
+          </div>
+        </form>
+      </ng-template>
+    </div>
+    <div class="col-md-6 order-md-1 py-5">
       <h2 class="display-3">Contact Us</h2>
       <h4>
         If you would like to discuss your upcoming project we’d be happy to
@@ -20,115 +144,6 @@
         <p>Latitude: 51.509865</p>
         <p>Longitude: -0.118092</p>
       </div>
-    </div>
-    <div class="col-md-6 form-column py-5">
-      <h3>Make An Enquiry</h3>
-      <form (submit)="onSubmit()" [formGroup]="contactForm" autocomplete="off">
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="name"
-            formControlName="name"
-            placeholder="Name"
-          />
-
-          <label for="name" class="form-label">Name</label>
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('name').valid && contactForm.get('name').touched
-            "
-          >
-            - Please enter a valid name.
-          </span>
-        </div>
-
-        <div class="mb-3">
-          <input
-            type="email"
-            id="email"
-            formControlName="email"
-            class="form-control"
-            placeholder="E-mail"
-          />
-
-          <label for="email" class="form-label">Email</label>
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('email').valid &&
-              contactForm.get('email').touched
-            "
-          >
-            - Please enter a valid email.
-          </span>
-        </div>
-
-        <div class="mb-3">
-          <input
-            type="text"
-            id="phone"
-            formControlName="phone"
-            class="form-control"
-            placeholder="Phone No."
-          />
-          <label for="phone" class="form-label">Phone No.</label>
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('phone').valid &&
-              contactForm.get('phone').touched
-            "
-          >
-            - Please enter a valid 9 digit phone number
-          </span>
-        </div>
-
-        <div class="mb-3">
-          <input
-            type="text"
-            class="form-control"
-            id="subject"
-            formControlName="subject"
-            placeholder="Subject"
-          />
-          <label for="subject" class="form-label">Subject</label>
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('subject').valid &&
-              contactForm.get('subject').touched
-            "
-          >
-            - Please enter a valid Subject.
-          </span>
-        </div>
-
-        <div class="mb-3">
-          <textarea
-            type="text"
-            class="form-control"
-            id="message"
-            formControlName="message"
-            placeholder="Message"
-            rows="6"
-          ></textarea>
-          <!-- <label for="message" class="form-label">message</label> -->
-          <span
-            class="form-text small"
-            *ngIf="
-              !contactForm.get('message').valid &&
-              contactForm.get('message').touched
-            "
-          >
-            - Please enter a valid message.
-          </span>
-        </div>
-        <div class="button-container">
-          <button class="btn">Submit</button>
-        </div>
-      </form>
     </div>
   </div>
 </div>
