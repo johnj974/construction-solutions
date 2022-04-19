@@ -1,44 +1,6 @@
-/* .container-fluid {
-  background: url("../../../assets/images/finish-deck.jpg") rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-}
-
 .container {
   height: 100%;
 }
-
-.row {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-h1 {
-  color: white;
-} */
-
-/* .container-fluid {
-  background: url("../../../assets/images/finish-deck.jpg") rgba(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-} */
-
-.container {
-  height: 100%;
-}
-
-/* .row {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
 
 h1 {
   color: white;
@@ -48,14 +10,14 @@ h1 {
   max-height: 60vh;
   overflow: hidden;
   width: 100%;
-  background-position: center;
+  /* background-position: center; */
   position: relative;
 }
 
-img {
+/* img {
   object-fit: cover;
   background-position: bottom;
-}
+} */
 
 .row {
   position: absolute;
